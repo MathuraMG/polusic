@@ -1,0 +1,5 @@
+<h3>New Article</h3>
+<%= form_for(@articles) do |f| %>
+  <p><%= f.text_field :item, :placeholder => "enter article name" %></p>
+  <p><%= f.submit %></p>
+<% end %>
