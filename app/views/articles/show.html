@@ -2,7 +2,7 @@
 <%= stylesheet_link_tag "style.css" %>
 
 <h3><%= @article.item %></h3>
-<p><%= @article.content %></p>
+<p><%= markdown(@article.content) %></p>
 
 <a><%= link_to 'Edit', {:action => 'edit', :id => params[:id]} %></a>
 <a><%= link_to 'Delete', @article,  method: :delete, data: { confirm: 'Are you sure?' } %></a>
