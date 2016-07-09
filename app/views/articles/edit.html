@@ -4,4 +4,9 @@
 <h3><%= @articles.item %></h3>
 <p><%= @articles.content %></p>
 
-<a><%= link_to 'Edit', {:action => 'edit', :id => params[:id]} %></a>
+<h3>Edit Article</h3>
+<%= form_for(@articles) do |f| %>
+  <p><%= f.text_field :item %></p>
+  <p><%= f.text_field :content %></p>
+  <p><%= f.submit %></p>
+<% end %>
