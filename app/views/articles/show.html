@@ -1,7 +1,9 @@
 <link href='https://fonts.googleapis.com/css?family=BenchNine:400,700,300' rel='stylesheet' type='text/css'>
 <%= stylesheet_link_tag "style.css" %>
 
-<h3><%= @articles.item %></h3>
-<p><%= @articles.content %></p>
+<h3><%= @article.item %></h3>
+<p><%= @article.content %></p>
 
 <a><%= link_to 'Edit', {:action => 'edit', :id => params[:id]} %></a>
+<a><%= link_to 'Delete', @article,  method: :delete, data: { confirm: 'Are you sure?' } %></a>
+<a><%= link_to 'Home', {:action => 'index'} %></a>
