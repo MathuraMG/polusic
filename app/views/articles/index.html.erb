@@ -1,7 +1,7 @@
 <% @articles.each do |article| %>
 <article class="articles">
   <h3 class="articles__title"><%= article.item %></h3>
-  <p class="articles__content"><%= article.content %></p>
+  <div class="articles__content"><%= markdown(article.content) %></div>
 </article>
 <a class="articles__expand"><%= link_to 'Read More', {:action => 'show', :id => article.id} %></a>
 <% end %>

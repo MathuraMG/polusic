@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 html {
-  font-family: 'BenchNine', sans-serif;
+  font-family: $font-stack;
   height: 100%;
 }
 
@@ -11,41 +11,38 @@ body {
   height: 100%;
 }
 
-h1 {
+.home__title {
   width: 100%;
   text-align: left;
   padding-left: 5%;
-  background-color: #f3d01c;;
+  background-color: $heading-primary-background;
 }
 
-h2 {
+.home__edition {
   width: 100%;
   text-align: left;
   padding-left: 5%;
-  background-color: #fdf812;
+  background-color: $heading-secondary-background;
 }
 
-h3 {
-  width: 100%;
-}
 
 .input {
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 100%;
 }
 
 .input__label {
-  width: 100%;
+
 }
 
 .input__title {
-  width: 100%;
+
 }
 
 .input__content {
   height: 50%;
-  width: 100%;
 }
 
 .button {
@@ -63,11 +60,11 @@ h3 {
 }
 
 .article__content {
-  width: 60%;
+
 }
 
 .articles {
-  width: 100%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   max-height: 200px;
@@ -79,5 +76,5 @@ h3 {
 }
 
 .articles__content {
-  width: 60%;
+
 }
