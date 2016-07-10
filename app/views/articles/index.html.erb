@@ -5,5 +5,8 @@
 </article>
 <a class="articles__expand"><%= link_to 'Read More', {:action => 'show', :id => article.id} %></a>
 <% end %>
+
+<% if current_user && current_user.is_admin %>
 <a><%= link_to "New", new_article_path %> </a>
+<% end %>
 <div id="calendar"></div>

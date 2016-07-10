@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
 
-  before_filter :authorize
+  before_filter :authorize, :only => [:create, :edit, :new, :update, :destroy]
 
   def index
     @articles = Article.all
@@ -31,5 +31,11 @@ class ArticlesController < ApplicationController
   private
   def article_params
     params.require(:article).permit(:item, :content)
+  end
+
+  def redirect_if_not_admin
+   if !@user.is_admin?
+      redirect_to :root
+    end
   end
 end
