@@ -8,6 +8,13 @@ Rails.application.routes.draw do
   root 'articles#index'
   resources :articles
 
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+
+  get '/signup' => 'users#new'
+  post '/users' => 'users#create'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
