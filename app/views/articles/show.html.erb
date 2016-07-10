@@ -2,7 +2,8 @@
   <h3 class="article__title"><%= @article.item %></h3>
   <p class="article__content"><%= markdown(@article.content) %></p>
 </div>
-
+<% if current_user && current_user.is_admin %>
 <a class="button"><%= link_to 'Edit', {:action => 'edit', :id => params[:id]} %></a>
 <a class="button"><%= link_to 'Delete', @article,  method: :delete, data: { confirm: 'Are you sure?' } %></a>
+<% end %>
 <a class="button"><%= link_to 'Home', {:action => 'index'} %></a>
