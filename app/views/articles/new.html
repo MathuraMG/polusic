@@ -1,8 +1,8 @@
-<h3>New Article</h3>
-<%= form_for(@articles) do |f| %>
-  <%= f.label :item, "Title" %>
-  <%= f.text_field :item, :placeholder => "enter article name", required: true %>
-  <%= f.label :content, "Content" %>
-  <%= f.text_field :content, :placeholder => "enter article name", required: true %>
+<h2>New Article</h2>
+<%= form_for(@article, :html => { :class => 'input' }) do |f| %>
+  <%= f.label :item, "Title", :class => 'input__label' %>
+  <%= f.text_field :item, :placeholder => "enter article name", required: true , :class => 'input__title' %>
+  <%= f.label :content, "Content", :class => 'input__label' %>
+  <%= f.text_area :content, :placeholder => "enter article name", required: true, :class => 'input__content' %>
   <%= f.submit %>
 <% end %>

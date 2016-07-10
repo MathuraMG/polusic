@@ -1,3 +1,83 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+html {
+  font-family: 'BenchNine', sans-serif;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+h1 {
+  width: 100%;
+  text-align: left;
+  padding-left: 5%;
+  background-color: #f3d01c;;
+}
+
+h2 {
+  width: 100%;
+  text-align: left;
+  padding-left: 5%;
+  background-color: #fdf812;
+}
+
+h3 {
+  width: 100%;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.input__label {
+  width: 100%;
+}
+
+.input__title {
+  width: 100%;
+}
+
+.input__content {
+  height: 50%;
+  width: 100%;
+}
+
+.button {
+  width: 20%;
+}
+
+.article {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.article__title {
+
+}
+
+.article__content {
+  width: 60%;
+}
+
+.articles {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-height: 200px;
+  overflow-y: hidden;
+}
+
+.articles__title {
+
+}
+
+.articles__content {
+  width: 60%;
+}

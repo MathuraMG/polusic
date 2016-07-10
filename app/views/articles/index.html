@@ -1,12 +1,9 @@
-<link href='https://fonts.googleapis.com/css?family=BenchNine:400,700,300' rel='stylesheet' type='text/css'>
-<%= stylesheet_link_tag "style.css" %>
-
-<h1>POLITICS AND MUSIC</h1>
-<h3>EDITION #1</h3>
-<ul>
 <% @articles.each do |article| %>
-  <a><%= link_to article.item, {:action => 'show', :id => article.id} %></a>
+<article class="articles">
+  <h3 class="articles__title"><%= article.item %></h3>
+  <p class="articles__content"><%= article.content %></p>
+</article>
+<a class="articles__expand"><%= link_to 'Read More', {:action => 'show', :id => article.id} %></a>
 <% end %>
-</ul>
 <a><%= link_to "New", new_article_path %> </a>
 <div id="calendar"></div>

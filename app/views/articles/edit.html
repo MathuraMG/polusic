@@ -1,12 +1,10 @@
-<link href='https://fonts.googleapis.com/css?family=BenchNine:400,700,300' rel='stylesheet' type='text/css'>
-<%= stylesheet_link_tag "style.css" %>
+<h3><%= @article.item %></h3>
+<p><%= @article.content %></p>
 
-<h3><%= @articles.item %></h3>
-<p><%= @articles.content %></p>
-
-<h3>Edit Article</h3>
-<%= form_for(@articles) do |f| %>
-  <p><%= f.text_field :item %></p>
-  <p><%= f.text_field :content %></p>
-  <p><%= f.submit %></p>
+<%= form_for(@article, :html => { :class => 'input' }) do |f| %>
+  <%= f.label :item, "Title", :class => 'input__label' %>
+  <%= f.text_field :item, :class => 'input__title' %>
+  <%= f.label :content, "Content", :class => 'input__label' %>
+  <%= f.text_field :content, :class => 'input__content' %>
+  <%= f.submit %>
 <% end %>
