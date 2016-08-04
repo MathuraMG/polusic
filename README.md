@@ -4,10 +4,9 @@
 ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-darwin14]
 
 #### System dependencies
-* postgresql -
-* ruby -
-* rails -
-* homebrew -
+* postgresql - you can use the [app](http://postgresapp.com/) if you are running this in MacOS. Else download from [here](https://www.postgresql.org/download/)
+* rails - [this](http://www.tutorialspoint.com/ruby-on-rails/rails-installation.htm) includes steps to install ruby as well.
+* [ruby](https://www.ruby-lang.org/en/documentation/installation/) - if for some reason you only need ruby (??)
 
 #### Setup
 1. Clone this repo to your local
@@ -39,5 +38,7 @@ You should see the webpage on localhost:3000
 * Authentication using bcrypt
 
 #### Link Dumps
-* if gem install fails to onstall pg gem - [Link](http://stackoverflow.com/questions/19262312/installing-pg-gem-on-os-x-failure-to-build-native-extension)
-* using rails console - [Link](http://www.giantflyingsaucer.com/blog/?p=1891)
+* Simple rails tutorial - [create a todo list](http://masteruby.github.io/weekly-rails/2014/03/22/how-to-create-todo-list-app-static-pages.html#.V6OsJNArJE7)
+* Using rails console - [Link](http://www.giantflyingsaucer.com/blog/?p=1891)
+* Authentication with bcrypt - [Link](https://gist.github.com/thebucknerlife/10090014)
+* [DEBUGGING] - if gem install fails to onstall pg gem - [Link](http://stackoverflow.com/questions/19262312/installing-pg-gem-on-os-x-failure-to-build-native-extension)
