@@ -5,8 +5,8 @@ ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-darwin14]
 
 #### System dependencies
 * postgresql - you can use the [app](http://postgresapp.com/) if you are running this in MacOS. Else download from [here](https://www.postgresql.org/download/)
-* rails - [this](http://www.tutorialspoint.com/ruby-on-rails/rails-installation.htm) includes steps to install ruby as well.
-* [ruby](https://www.ruby-lang.org/en/documentation/installation/) - if for some reason you only need ruby (??)
+* [ruby](https://www.ruby-lang.org/en/documentation/installation/) - currently using 2.3.1
+* imagemagick - to run the paperclip gem - [steps](https://github.com/thoughtbot/paperclip#image-processor)
 
 #### Setup
 1. Clone this repo to your local
@@ -44,3 +44,4 @@ You should see the webpage on localhost:3000
 * Authentication with bcrypt - [Link](https://gist.github.com/thebucknerlife/10090014)
 * [DEBUGGING] - if gem install fails to onstall pg gem - [Link](http://stackoverflow.com/questions/19262312/installing-pg-gem-on-os-x-failure-to-build-native-extension)
 * [simple_calendar](https://github.com/excid3/simple_calendar)
+* Markdown cheat sheet - [try this](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
