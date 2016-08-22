@@ -33,7 +33,7 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 
 # for calendar events
-gem 'fullcalendar-rails'
+gem "simple_calendar", "~> 2.0"
 gem 'momentjs-rails'
 
 # Use postgres

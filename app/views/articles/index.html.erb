@@ -9,4 +9,14 @@
 <% if current_user && current_user.is_admin %>
 <a><%= link_to "New", new_article_path %> </a>
 <% end %>
-<div id="calendar"></div>
+
+<div id="calendar">
+  <%= month_calendar events: Event.all do |date,events| %>
+    <%= date %>
+    <%events.each do |event|%>
+      <div>
+        <%= event.name %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
