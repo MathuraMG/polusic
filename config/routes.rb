@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :playlists
   resources :images
   resources :events
   get 'index/homepage'
