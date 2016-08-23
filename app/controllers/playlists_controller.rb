@@ -1,5 +1,6 @@
 class PlaylistsController < ApplicationController
   before_action :set_playlist, only: [:show, :edit, :update, :destroy]
+  before_filter :authorize, :only => [:create, :edit, :new, :update, :destroy]
 
   # GET /playlists
   # GET /playlists.json

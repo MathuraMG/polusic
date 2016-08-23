@@ -3,7 +3,7 @@
   <h3 class="articles__title"><%= article.item %></h3>
   <div class="articles__content"><%= markdown(article.content) %></div>
 </article>
-<a class="articles__expand"><%= link_to 'Read More', {:action => 'show', :id => article.id} %></a>
+<a class="articles__expand"><%= link_to 'Read More', article %></a>
 <% end %>
 
 <% if current_user && current_user.is_admin %>
@@ -20,3 +20,13 @@
     <% end %>
   <% end %>
 </div>
+
+<% @playlists.each do |playlist| %>
+  <%= playlist.author %>
+  <%= playlist.name %>
+  <%= playlist.name %>
+  <iframe width="560" height="315" src="<%= playlist.url %>" frameborder="0" allowfullscreen></iframe>
+<% end %>
+<% if current_user && current_user.is_admin %>
+<a><%= link_to "New", new_playlist_path %> </a>
+<% end %>
