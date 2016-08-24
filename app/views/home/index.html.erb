@@ -1,39 +1,56 @@
 <div class="container">
-  <div class="articles-container">
-    <% @articles.each do |article| %>
-    <article class="articles">
-      <h3 class="articles__title"><%= article.item %></h3>
-      <div class="articles__content"><%= markdown(article.content) %></div>
-    </article>
-    <a class="articles__expand"><%= link_to 'Read More', article %></a>
-    <% end %>
+  <div class="articles-playlists-container">
 
-    <% if current_user && current_user.is_admin %>
-    <a><%= link_to "New", new_article_path %> </a>
-    <% end %>
+    <div class="articles-container">
+      <% @articles.each do |article| %>
+      <article class="articles">
+        <h3 class="articles__title"><%= article.item %></h3>
+        <div class="articles__content"><%= markdown(article.content) %></div>
+      </article>
+      <a class="articles__expand"><%= link_to 'Read More', article %></a>
+      <% end %>
+
+      <% if current_user && current_user.is_admin %>
+      <a><%= link_to "New", new_article_path %> </a>
+      <% end %>
+    </div>
+
+    <div class="playlists-container">
+      <% @playlists.each do |playlist| %>
+        <h3 class="playlist__name"><%= playlist.name %></h3>
+        <h4 class="playlist__author"><%= playlist.author %></h4>
+        <iframe src="<%= playlist.url %>" frameborder="0" class="playlist__frame" allowfullscreen></iframe>
+      <% end %>
+      <% if current_user && current_user.is_admin %>
+      <a><%= link_to "New", new_playlist_path %> </a>
+      <% end %>
+    </div>
+
   </div>
 
-  <div class="calendar-playlists-container">
+  <div class="event-container">
+    <header class="events__header">
+      <p class="events__title"> Events </p>
+      <%= link_to "+", new_event_path %>
+    </header>
 
-    <% @playlists.each do |playlist| %>
-      <h3 class="playlist__name"><%= playlist.name %></h3>
-      <h4 class="playlist__author"><%= playlist.author %></h4>
-      <iframe src="<%= playlist.url %>" frameborder="0" class="playlist__frame" allowfullscreen></iframe>
-    <% end %>
-    <% if current_user && current_user.is_admin %>
-    <a><%= link_to "New", new_playlist_path %> </a>
-    <% end %>
+    <div class="calendar-details-container" id="events">
 
-    <h2> Events </h2>
-    <h3><%= link_to "Add new event", new_event_path %></h3>
-    <%= month_calendar events: Event.all do |date,events| %>
-      <%= date.day %>
-      <%events.each do |event|%>
-        <div>
-          <%= link_to event.name, event %>
-        </div>
-      <% end %>
-    <% end %>
+      <div class="calendar-container">
+        <%= month_calendar events: Event.all do |date,events| %>
+          <%= date.day %>
+          <%events.each do |event|%>
+            <div>
+              <%= link_to event.name, event %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+
+      <div class="details-container">
+      </div>
+
+    </div>
 
   </div>
 

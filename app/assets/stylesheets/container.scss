@@ -1,20 +1,34 @@
 .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 0;
   margin: 0;
 }
 
-.articles-container {
+.articles-playlists-container {
   display: flex;
-  width: 70%;
-  flex-direction: column;
-  margin: 2rem;
+  width: 100%;
+  flex-direction: row;
+  overflow:scroll;
+  height:100%;
+  .articles-container {
+    width: 70%;
+    margin: 2rem;
+  }
+
+  .playlists-container {
+    width: 30%;
+    margin: 2rem;
+  }
 }
 
-.calendar-playlists-container {
-  display: flex;
-  width: 30%;
-  flex-direction: column;
+.calendar-details-container {
+  width: 100%;
+  flex-direction: row;
   margin: 2rem;
+  .details-container {
+    width: 70%;
+    margin: 2rem;
+  }
+  .calendar-container {}
 }

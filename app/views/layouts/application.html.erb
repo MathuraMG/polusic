@@ -11,13 +11,10 @@
   <header>
     <h1 class="home__title">POLITICS AND MUSIC</h1>
     <h2 class="home__edition">EDITION #1</h2>
-  </header>
-  <%= yield %>
-  <footer>
     <% if current_user && current_user.is_admin %>
     Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
     <% end %>
-
-  </footer>
+  </header>
+  <%= yield %>
 </body>
 </html>
