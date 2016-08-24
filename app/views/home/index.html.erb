@@ -1,32 +1,40 @@
-<% @articles.each do |article| %>
-<article class="articles">
-  <h3 class="articles__title"><%= article.item %></h3>
-  <div class="articles__content"><%= markdown(article.content) %></div>
-</article>
-<a class="articles__expand"><%= link_to 'Read More', article %></a>
-<% end %>
-
-<% if current_user && current_user.is_admin %>
-<a><%= link_to "New", new_article_path %> </a>
-<% end %>
-
-<div id="calendar">
-  <%= month_calendar events: Event.all do |date,events| %>
-    <%= date %>
-    <%events.each do |event|%>
-      <div>
-        <%= event.name %>
-      </div>
+<div class="container">
+  <div class="articles-container">
+    <% @articles.each do |article| %>
+    <article class="articles">
+      <h3 class="articles__title"><%= article.item %></h3>
+      <div class="articles__content"><%= markdown(article.content) %></div>
+    </article>
+    <a class="articles__expand"><%= link_to 'Read More', article %></a>
     <% end %>
-  <% end %>
-</div>
 
-<% @playlists.each do |playlist| %>
-  <%= playlist.author %>
-  <%= playlist.name %>
-  <%= playlist.name %>
-  <iframe width="560" height="315" src="<%= playlist.url %>" frameborder="0" allowfullscreen></iframe>
-<% end %>
-<% if current_user && current_user.is_admin %>
-<a><%= link_to "New", new_playlist_path %> </a>
-<% end %>
+    <% if current_user && current_user.is_admin %>
+    <a><%= link_to "New", new_article_path %> </a>
+    <% end %>
+  </div>
+
+  <div class="calendar-playlists-container">
+
+    <% @playlists.each do |playlist| %>
+      <h3 class="playlist__name"><%= playlist.name %></h3>
+      <h4 class="playlist__author"><%= playlist.author %></h4>
+      <iframe src="<%= playlist.url %>" frameborder="0" class="playlist__frame" allowfullscreen></iframe>
+    <% end %>
+    <% if current_user && current_user.is_admin %>
+    <a><%= link_to "New", new_playlist_path %> </a>
+    <% end %>
+
+    <h2> Events </h2>
+    <h3><%= link_to "Add new event", new_event_path %></h3>
+    <%= month_calendar events: Event.all do |date,events| %>
+      <%= date.day %>
+      <%events.each do |event|%>
+        <div>
+          <%= link_to event.name, event %>
+        </div>
+      <% end %>
+    <% end %>
+
+  </div>
+
+<div>

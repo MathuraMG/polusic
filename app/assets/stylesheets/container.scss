@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+}
+
+.articles-container {
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  margin: 2rem;
+}
+
+.calendar-playlists-container {
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  margin: 2rem;
+}

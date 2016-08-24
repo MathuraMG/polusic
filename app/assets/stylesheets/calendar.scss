@@ -1,0 +1,37 @@
+.simple-calendar {
+  padding: 0;
+  .day {
+    vertical-align: initial;
+    width: 16%;
+    height: 50px;
+    overflow-y: hidden;
+  }
+
+  .today {
+    background-color: #a3d4b9;
+  }
+  .past {
+    background-color: #eee;
+  }
+  .future {}
+
+  .wday-0 {
+    background-color: #f8f8f8;
+  }
+  .wday-1 {}
+  .wday-2 {}
+  .wday-3 {}
+  .wday-4 {}
+  .wday-5 {}
+  .wday-6 {}
+
+  .start-date {}
+
+  .prev-month {}
+  .next-month { }
+  .current-month {}
+
+  .has-events {
+    background-color: #4354f4;
+  }
+}
