@@ -45,6 +45,7 @@ gem 'redcarpet', '~> 3.0.0'
 # Use carrierwave for image uploading
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~> 4.3'
+gem 'carrierwave-dropbox'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

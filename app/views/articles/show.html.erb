@@ -3,7 +3,7 @@
   <div class="article__content"><%= markdown(@article.content) %></div>
 </div>
 <% if current_user && current_user.is_admin %>
-<a class="button"><%= link_to 'Edit', {:action => 'edit', :id => params[:id]} %></a>
-<a class="button"><%= link_to 'Delete', @article,  method: :delete, data: { confirm: 'Are you sure?' } %></a>
+  <a class="button"><%= link_to 'Edit', {:action => 'edit', :id => params[:id]} %></a>
+  <a class="button"><%= link_to 'Delete', @article,  method: :delete, data: { confirm: 'Are you sure?' } %></a>
 <% end %>
-<a class="button"><%= link_to 'Home', {:action => 'index'} %></a>
+<a class="button"><%= link_to 'Home', '/' %></a>

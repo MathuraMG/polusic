@@ -37,6 +37,7 @@ You should see the webpage on localhost:3000
 * Need to switch to react(??)
 * Authentication using bcrypt
 * Calendar widget added with [simple_calendar](https://github.com/excid3/simple_calendar)
+* [CarrierWave and dropbox](https://github.com/robin850/carrierwave-dropbox) for image uploading 
 
 #### Link Dumps
 * Simple rails tutorial - [create a todo list](http://masteruby.github.io/weekly-rails/2014/03/22/how-to-create-todo-list-app-static-pages.html#.V6OsJNArJE7)
