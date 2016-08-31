@@ -6,4 +6,8 @@
     <%= f.text_area :content, :class => 'input__content' %>
     <%= f.submit %>
   <% end %>
+  <% if current_user && current_user.is_admin %>
+    <a class="button"><%= link_to 'Delete', @article,  method: :delete, data: { confirm: 'Are you sure?' } %></a>
+  <% end %>
+  <%= link_to 'Back', :root %>
 </div>

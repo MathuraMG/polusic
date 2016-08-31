@@ -24,6 +24,11 @@
       <% @playlists.each do |playlist| %>
         <h3 class="playlist__name"><%= playlist.name %></h3>
         <h4 class="playlist__author"><%= playlist.author %></h4>
+        <% if current_user && current_user.is_admin %>
+          <a href="<%= edit_playlist_path(playlist.id) %>">
+            <img src="/assets/edit.svg" class="playlists__edit-button" alt="Edit playlists">
+          </a>
+        <% end %>
         <iframe class="playlist__iframe" src="<%= playlist.url %>" frameborder="0" class="playlist__frame" allowfullscreen></iframe>
       <% end %>
     </div>

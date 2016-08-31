@@ -2,5 +2,8 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @playlist %> |
+<% if current_user && current_user.is_admin %>
+  <a class="button"><%= link_to 'Delete', @playlist,  method: :delete, data: { confirm: 'Are you sure?' } %></a>
+<% end %>
+
 <%= link_to 'Back', :root %>
