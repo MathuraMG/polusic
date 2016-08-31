@@ -15,3 +15,13 @@
 //= require turbolinks
 //= require_tree .
 //= require moment
+
+function toggleEvents() {
+  var eventContainer = document.getElementById('event-container');
+  if(eventContainer.style.display=='none') {
+    eventContainer.style.display = 'flex';
+  }
+  else {
+    eventContainer.style.display='none'
+  }
+}

@@ -8,13 +8,24 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header>
-    <h1 class="home__title">POLITICS AND MUSIC</h1>
-    <h2 class="home__edition">EDITION #1</h2>
+  <header class="home__header">
+    <h1 class="home__title">4th FLOOR DIGEST</h1>
+    <!-- <h5 class="home__edition">EDITION #1</h5> -->
+
     <% if current_user && current_user.is_admin %>
-    Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+      <nav class="home__nav">
+        <ul class="nav__list-left">
+          <li class="nav__item"><%= link_to 'Add Article', new_article_path, class: "nav__link" %></li>
+          <li class="nav__item"><%= link_to 'Add Playlist', new_playlist_path, class: "nav__link" %></li>
+        </ul>
+        <ul class="nav__list-right">
+          <li class="nav__item">Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %></li>
+        </ul>
+      </nav>
     <% end %>
   </header>
-  <%= yield %>
+  <section class="page__content">
+    <%= yield %>
+  </section>
 </body>
 </html>

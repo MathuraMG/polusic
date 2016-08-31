@@ -44,6 +44,6 @@ class PlaylistsControllerTest < ActionController::TestCase
       delete :destroy, id: @playlist
     end
 
-    assert_redirected_to playlists_path
+    assert_redirected_to :root
   end
 end

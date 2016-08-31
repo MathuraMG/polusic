@@ -10,7 +10,7 @@ class ArticlesController < ApplicationController
   end
   def create
     @articles = Article.create(article_params)
-    redirect_to articles_path
+    redirect_to :root
   end
   def show
     @article = Article.find(params[:id])
@@ -25,7 +25,7 @@ class ArticlesController < ApplicationController
   end
   def destroy
     Article.find(params[:id]).destroy
-    redirect_to articles_path
+    redirect_to :root
   end
 
   private
