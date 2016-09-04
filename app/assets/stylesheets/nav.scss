@@ -1,0 +1,22 @@
+.nav__list-left {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  flex-grow: .05;
+  padding: 0;
+}
+
+.nav__list-right {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.nav__item {
+  display: list-item;
+  padding: 0 .1rem;
+}
+
+.nav__link{
+  text-decoration: none;
+}

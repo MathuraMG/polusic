@@ -15,6 +15,7 @@
   <tbody>
     <% @images.each do |image| %>
       <tr>
+        <td><%= image.id %></td>
         <td><%= image.name %></td>
         <td><%= image.image %></td>
         <td><%= image.description %></td>

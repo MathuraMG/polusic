@@ -38,4 +38,15 @@ class ArticlesController < ApplicationController
       redirect_to :root
     end
   end
+
+  def say_hello
+    "<h1>Potato</h1>"
+  end
+
+  def present(article)
+    article.gsub(/{{(.+)}}/,Image.find(article[/{{(.+)}}/,1]).image.url)
+  end
+
+  helper_method :say_hello
+  helper_method :present
 end

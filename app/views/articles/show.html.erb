@@ -1,5 +1,5 @@
 <div class="article">
   <h3 class="article__title"><%= @article.item %></h3>
-  <div class="article__content"><%= markdown(@article.content) %></div>
+  <div class="article__content"><%= markdown(present(@article.content)).html_safe %></div>
 </div>
 <a class="button"><%= link_to 'Home', :root %></a>

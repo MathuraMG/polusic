@@ -63,29 +63,6 @@ h4 {
   padding: 0 3rem;
 }
 
-.nav__list-left {
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  flex-grow: .05;
-  padding: 0;
-}
-
-.nav__list-right {
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-}
-
-.nav__item {
-  display: list-item;
-  padding: 0 .1rem;
-}
-
-.nav__link{
-  text-decoration: none;
-}
-
 .input {
   display: flex;
   flex-direction: column;
@@ -116,7 +93,12 @@ h4 {
 }
 
 .article-container {
+  padding-right: 1rem;
   padding-bottom: 1.5rem;
+  list-style: none;
+  width: 48%;
+  display: inline-flex;
+  flex-direction: column;
 }
 
 .article__title {
@@ -136,6 +118,10 @@ h4 {
   & + & {
   border-top: 2px dashed $border-color;
   }
+}
+
+.articles__list {
+  padding: 0;
 }
 
 .articles__title {

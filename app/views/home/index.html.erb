@@ -2,22 +2,24 @@
   <div class="articles-playlists-container">
 
     <div class="articles-container">
-      <% @articles.each do |article| %>
-      <div class="article-container">
-        <article class="articles">
-          <div class="articles__title-container" >
-            <h3 class="articles__title"><%= article.item %></h3>
-            <% if current_user && current_user.is_admin %>
-              <a href="<%= edit_article_path(article.id) %>">
-                <img src="/assets/edit.svg" class="articles__edit-button" alt="Edit article">
-              </a>
-            <% end %>
-          </div>
-          <div class="articles__content"><%= markdown(article.content) %></div>
-        </article>
-        <a class="articles__expand"><%= link_to 'Read More', article %></a>
-      </div>
-      <% end %>
+      <ul class="articles__list">
+        <% @articles.each do |article| %>
+          <li class="article-container">
+            <article class="articles">
+              <div class="articles__title-container" >
+                <h3 class="articles__title"><%= article.item %></h3>
+                <% if current_user && current_user.is_admin %>
+                  <a href="<%= edit_article_path(article.id) %>">
+                    <img src="/assets/edit.svg" class="articles__edit-button" alt="Edit article">
+                  </a>
+                <% end %>
+              </div>
+              <div class="articles__content"><%= markdown(article.content) %></div>
+            </article>
+            <a class="articles__expand"><%= link_to 'Read More', article %></a>
+          </li>
+        <% end %>
+      </ul>
     </div>
 
     <div class="playlists-container">
