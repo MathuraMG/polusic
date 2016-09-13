@@ -39,12 +39,11 @@ class ArticlesController < ApplicationController
     end
   end
 
-  def say_hello
-    "<h1>Potato</h1>"
-  end
-
   def present(article)
-    article.gsub(/{{(.+)}}/,Image.find(article[/{{(.+)}}/,1]).image.url)
+    if(article[/{{(.+)}}/,1])
+      article.gsub!(/{{(.+)}}/) { Image.find(Integer(Regexp.last_match[1])).image.url}
+    end
+      article = article
   end
 
   helper_method :say_hello
