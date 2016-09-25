@@ -1,9 +1,15 @@
 <div class="edit-container">
   <%= form_for(@article, :html => { :class => 'input' }) do |f| %>
-    <%= f.label :item, "Title", :class => 'input__label' %>
-    <%= f.text_field :item, :class => 'input__title' %>
-    <%= f.label :content, "Content", :class => 'input__label' %>
-    <%= f.text_area :content, :class => 'input__content' %>
+  <%= f.label :item, "Title", :class => 'input__label' %>
+  <%= f.text_field :item, :placeholder => "enter article name", required: true , :class => 'input__title' %>
+  <%= f.label :author, "Author", :class => 'input__label' %>
+  <%= f.text_area :author, :placeholder => "enter author name", required: true, :class => 'input__title' %>
+  <%= f.label :cover_image, "Cover Image", :class => 'input__label' %>
+  <%= f.text_area :cover_image, :placeholder => "enter image url", required: true, :class => 'input__title' %>
+  <%= f.label :blurb, "Blurb", :class => 'input__label' %>
+  <%= f.text_area :blurb, :placeholder => "enter blurb", :class => 'input__content' %>
+  <%= f.label :content, "Content", :class => 'input__label' %>
+  <%= f.text_area :content, :placeholder => "enter article name", required: true, :class => 'input__content' %>
     <%= f.submit %>
   <% end %>
   <% if current_user && current_user.is_admin %>

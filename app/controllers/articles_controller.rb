@@ -30,7 +30,7 @@ class ArticlesController < ApplicationController
 
   private
   def article_params
-    params.require(:article).permit(:item, :content)
+    params.require(:article).permit(:item, :content, :author, :cover_image, :blurb)
   end
 
   def redirect_if_not_admin
