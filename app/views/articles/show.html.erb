@@ -1,7 +1,7 @@
 <div class="article">
   <h2 class="article__title"><%= @article.item %></h2>
   <h4 class="article__author">By <%= @article.author %></h4>
-  <img class="article__cover-image" alt="cover image" src="<%= @article.cover_image%>" >
+  <img class="article__cover-image" alt="cover image" src="<%= present(@article.cover_image)%>" >
   <div class="article__blurb"><%= @article.blurb %></div>
   <div class="article__content"><%= markdown(present(@article.content)).html_safe %></div>
 </div>

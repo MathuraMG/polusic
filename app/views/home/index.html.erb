@@ -9,7 +9,7 @@
               <div class="articles__title-container" >
                 <h3 class="articles__title"><%= article.item %></h3>
                 <h5 class="articles__author"><%= article.author%></h5>
-                <img class="articles__cover-image" alt="cover image" src="<%= article.cover_image%>" >
+                <img class="articles__cover-image" alt="cover image" src="<%= present(article.cover_image)%>" >
                 <% if current_user && current_user.is_admin %>
                   <a href="<%= edit_article_path(article.id) %>">
                     <img src="/assets/edit.svg" class="articles__edit-button" alt="Edit article">
