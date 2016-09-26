@@ -17,12 +17,8 @@
       <tr>
         <td><%= image.id %></td>
         <td><%= image.name %></td>
-        <td><%= image.image %></td>
-        <td><%= image.description %></td>
+        <td><%= image_tag image.image.thumb.url %></td>
         <td><%= link_to 'Show', image %></td>
-        <td><%= image_tag image.image.url %></td>
-        <td><%= image.image.url %></td>
-        <td><%= image.image.thumb.url %></td>
         <td><%= link_to 'Edit', edit_image_path(image) %></td>
         <td><%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
