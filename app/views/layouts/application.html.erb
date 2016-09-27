@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Polusic</title>
+  <title>The Circuit</title>
   <link href='https://fonts.googleapis.com/css?family=BenchNine:400,700,300' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -9,7 +9,9 @@
 </head>
 <body>
   <header class="home__header">
-    <h1 class="home__title">4th FLOOR DIGEST</h1>
+    <h1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspThe Circuit
+    <!-- <img src="/assets/circuitlogo.png" class="home__circuit-logo" alt="circuit logo"> -->
+    <span class="home__title-text-large">ISSUE<span class="home__title-circle">&nbsp#0&nbsp</span></span></h1>
     <!-- <h5 class="home__edition">EDITION #1</h5> -->
 
     <% if current_user && current_user.is_admin %>
@@ -27,5 +29,9 @@
   <section class="page__content">
     <%= yield %>
   </section>
+  <footer class="home__footer">The Circuit: an ITP community magzine <span class="home__title-highlight">❤</span> 
+    <p class="home__title-light">Submit to the Next Issue:&nbsp
+    <a class="home__title-highlight" href="mailto:thecircuit.itp@gmail.com">thecircuit.itp@gmail.com</a></p>
+  </footer>
 </body>
 </html>

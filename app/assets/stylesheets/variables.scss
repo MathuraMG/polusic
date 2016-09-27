@@ -1,10 +1,16 @@
-$font-stack: 'BenchNine', sans-serif;
+$font-stack: Geneva,Arial,sans-serif;  
+$font--secondary-stack: "BenchNine", sans-serif;
 $heading-primary-background: #dae1e2;
 $heading-secondary-background: #fdf812;
 $heading-primary-color: #444;
-$heading-secondary-color: #888;
+$heading-secondary-color: #ff5e99;//888
 $content-primary-background: #333;
 $border-color: #999;
 $nav-color: #c3c3c3;
-$heading-color: #f1f1f1;
+$heading-color: #fafafa;
 $event-color: #d8d8d8;
+$heading-text-color: #000;
+$heading-text-color-light: #fff;
+$heading-text-color-dark: #000;
+$scroller-color: #84dbfc;
+$text-color-highlight: #ff5e99;

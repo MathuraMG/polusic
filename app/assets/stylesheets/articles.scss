@@ -4,6 +4,7 @@
 
 html {
   font-family: $font-stack;
+  font-weight: 400;
   height: 100%;
   padding: 0;
   margin: 0;
@@ -20,34 +21,84 @@ h1,h2,h3,h4,h5 {
   margin: 0;
 }
 
-p {
-  padding: 0;
-  margin: 0;
-}
-
 h1 {
   font-size: 3rem;
 }
+
+h3 {
+  font-size: 3em;
+  padding: 1em 0px 0.5em;
+  &::selection {
+  background: $text-color-highlight;
+  text-shadow: none;
+  color: $heading-text-color-light;
+  }
+}
+
+.articles__title {
+  font-size: 1.5em;
+}
+
+.playlist__name {
+  font-size: 1.5em;
+}
+
+h3
 
 h4 {
   color: $heading-secondary-color;
 }
 
+p {
+  padding: 0;
+  margin: 0;
+  font-size: 1em;
+  margin: 0px 0px 10px;
+}
+
+p::selection {
+  background: $text-color-highlight;
+  text-shadow: none;
+  color: $heading-text-color-light;
+}
+
+a {
+  color: $text-color-highlight;
+}
+
 .page__content {
-  padding: 0 3rem;
-  height: 80%;
-  padding-top: 3rem;
+  // padding: 0 3rem;
+  // height: 80%;
+  // padding-top: 3rem;
+  background: $heading-color;
 }
 
 .home__header {
-  height: 10%;
+  background: $heading-color;
 }
 
 .home__title {
   width: 100%;
-  padding: 0 3rem;
-  background: $heading-color;
   text-align: center;
+  color: $heading-text-color;
+  text-decoration: none;
+}
+
+.home__title-light {
+  // color: $heading-text-color-light;
+  color: $heading-text-color-dark;
+}
+
+.home__title-highlight {
+  color: $text-color-highlight;
+}
+
+.home__title-text {
+  padding: 2rem 0 0 0;
+}
+
+.home__title-text-large {
+  font-size: 25px;
 }
 
 .home__edition {
@@ -61,6 +112,27 @@ h4 {
   flex-direction: row;
   justify-content: space-between;
   padding: 0 3rem;
+}
+
+.home__circuit-logo {
+  padding: 2rem 0 0 7.7rem;
+  margin: 0;
+  width: 20rem;
+}
+
+.home__title-circle {
+  font-family: $font--secondary-stack;
+  background: $heading-text-color-light;
+  border-radius: 48%;
+  color: $text-color-highlight;
+}
+
+.home__footer {
+  text-align: center;
+  background: $heading-color;
+  // color: $heading-text-color-light;
+  color: $heading-text-color-dark;
+  padding: 2em 0;
 }
 
 .input {
@@ -84,19 +156,24 @@ h4 {
 
 .button {
   width: 20%;
+  padding-left: 7.9rem;
 }
 
 .article {
   width: 100%;
   display: flex;
   flex-direction: column;
+  background-color: $heading-text-color-light;
+  // width: 80%;
+  // margin-right: auto;
+  // margin-left: auto;
 }
 
 .article-container {
   padding-right: 1rem;
   padding-bottom: 1.5rem;
   list-style: none;
-  width: 48%;
+  width: 90%;
   display: inline-flex;
   flex-direction: column;
 }
@@ -106,7 +183,10 @@ h4 {
 }
 
 .article__title {
-
+  color: $text-color-highlight;
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .article__blurb {
@@ -115,6 +195,10 @@ h4 {
 
 .article__content {
   height: 100%;
+  // backgound-color: $heading-text-color-light;
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .articles {
@@ -129,11 +213,12 @@ h4 {
 }
 
 .articles__list {
-  padding: 0;
+  padding-left: 5em;
+  direction: ltr;
 }
 
 .articles__title {
-
+  color: $text-color-highlight;
 }
 
 .articles__author {
@@ -141,8 +226,8 @@ h4 {
 }
 
 .articles__content {
-  padding: 0;
-  margin: 0;
+  // padding: 0;
+  // margin: 0;
 }
 
 .articles__edit-button {
