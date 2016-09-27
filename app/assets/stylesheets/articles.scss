@@ -28,21 +28,22 @@ h1 {
 h3 {
   font-size: 3em;
   padding: 1em 0px 0.5em;
-}
-
-h3.articles__title {
-  font-size: 1.5em;
-}
-
-h3.playlist__name {
-  font-size: 1.5em;
-}
-
-h3::selection {
+  &::selection {
   background: $text-color-highlight;
   text-shadow: none;
   color: $heading-text-color-light;
+  }
 }
+
+.articles__title {
+  font-size: 1.5em;
+}
+
+.playlist__name {
+  font-size: 1.5em;
+}
+
+h3
 
 h4 {
   color: $heading-secondary-color;
