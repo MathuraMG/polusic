@@ -5,37 +5,40 @@
       <ul class="articles__list">
         <% @articles.each do |article| %>
           <li class="article-container">
-            <article class="articles">
-              <div class="articles__title-container" >
-                <h3 class="articles__title"><%= article.item %></h3>
-                <h5 class="articles__author"><%= article.author%></h5>
+            <%= link_to (article), :class=>'article-container' do   %>
+              <div class="article__cover-image-container">
                 <img class="articles__cover-image" alt="cover image" src="<%= present(article.cover_image)%>" >
-                <% if current_user && current_user.is_admin %>
-                  <a href="<%= edit_article_path(article.id) %>">
-                    <img src="/assets/edit.svg" class="articles__edit-button" alt="Edit article">
-                  </a>
-                <% end %>
               </div>
-              <div class="articles__content"><%= markdown(article.content) %></div>
-            </article>
-            <a class="articles__expand"><%= link_to 'Read More', article %></a>
+              <div class="articles__heading-container">
+                <h2 class="articles__title"><%= article.item %></h3>
+                <h4 class="articles__author"><%= article.author%></h5>
+              </div>
+              <% if current_user && current_user.is_admin %>
+                <a href="<%= edit_article_path(article.id) %>">
+                  <img src="/assets/edit.svg" class="articles__edit-button" alt="Edit article">
+                </a>
+              <% end %>
+            <% end%>
+
           </li>
         <% end %>
       </ul>
     </div>
 
-    <div class="playlists-container">
+    <ul class="playlists-container">
       <% @playlists.each do |playlist| %>
-        <h3 class="playlist__name"><%= playlist.name %></h3>
-        <h4 class="playlist__author"><%= playlist.author %></h4>
-        <% if current_user && current_user.is_admin %>
-          <a href="<%= edit_playlist_path(playlist.id) %>">
-            <img src="/assets/edit.svg" class="playlists__edit-button" alt="Edit playlists">
-          </a>
-        <% end %>
-        <iframe class="playlist__iframe" src="<%= playlist.url %>" frameborder="0" class="playlist__frame" allowfullscreen></iframe>
+        <li class="playlist_container">
+          <h3 class="playlist__name"><%= playlist.name %></h3>
+          <h4 class="playlist__author"><%= playlist.author %></h4>
+          <% if current_user && current_user.is_admin %>
+            <a href="<%= edit_playlist_path(playlist.id) %>">
+              <img src="/assets/edit.svg" class="playlists__edit-button" alt="Edit playlists">
+            </a>
+          <% end %>
+          <iframe class="playlist__iframe" src="<%= playlist.url %>" frameborder="0" class="playlist__frame" allowfullscreen></iframe>
+        </li>
       <% end %>
-    </div>
+    </ul>
 
   </div>
 

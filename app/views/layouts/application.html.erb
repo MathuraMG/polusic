@@ -3,16 +3,20 @@
 <head>
   <title>The Circuit</title>
   <link href='https://fonts.googleapis.com/css?family=BenchNine:400,700,300' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i|PT+Serif:400,400i,700,700i" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:300,300i,400,400i,600,600i|Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
   <header class="home__header">
-    <h1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspThe Circuit
-    <!-- <img src="/assets/circuitlogo.png" class="home__circuit-logo" alt="circuit logo"> -->
-    <span class="home__title-text-large">ISSUE<span class="home__title-circle">&nbsp#0&nbsp</span></span></h1>
-    <!-- <h5 class="home__edition">EDITION #1</h5> -->
+    <a href="/">
+      <img src="/assets/circuitlogo.png" class="home__circuit-logo" alt="circuit logo">
+    </a>
+    <h3 class="home__title-text">&nbsp;&nbsp;ISSUE<span class="home__title-number">&nbsp#0&nbsp</span>
+    </h3>
+
 
     <% if current_user && current_user.is_admin %>
       <nav class="home__nav">
@@ -29,9 +33,10 @@
   <section class="page__content">
     <%= yield %>
   </section>
-  <footer class="home__footer">The Circuit: an ITP community magzine <span class="home__title-highlight">❤</span> 
-    <p class="home__title-light">Submit to the Next Issue:&nbsp
-    <a class="home__title-highlight" href="mailto:thecircuit.itp@gmail.com">thecircuit.itp@gmail.com</a></p>
+  <footer class="home__footer">The Circuit: an ITP community magazine <span class="home__title-highlight">❤</span>
+    <p>Submit to the Next Issue:&nbsp
+      <a class="home__title-highlight" href="mailto:thecircuit.itp@gmail.com">thecircuit.itp@gmail.com</a>
+    </p>
   </footer>
 </body>
 </html>
