@@ -27,7 +27,7 @@ h1 {
 
 h3 {
   font-size: 3em;
-  padding: 1em 0px 0.5em;
+  padding: 0;
   &::selection {
   background: $text-color-highlight;
   text-shadow: none;
@@ -43,10 +43,8 @@ h3 {
   font-size: 1.5em;
 }
 
-h3
-
-h4 {
-  color: $heading-secondary-color;
+h3,h4 {
+  color: $heading-primary-color;
 }
 
 p {
@@ -67,9 +65,6 @@ a {
 }
 
 .page__content {
-  // padding: 0 3rem;
-  // height: 80%;
-  // padding-top: 3rem;
   background: $heading-color;
 }
 
@@ -85,7 +80,6 @@ a {
 }
 
 .home__title-light {
-  // color: $heading-text-color-light;
   color: $heading-text-color-dark;
 }
 
@@ -94,11 +88,20 @@ a {
 }
 
 .home__title-text {
-  padding: 2rem 0 0 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  color: $heading-secondary-color;
+  display: inline;
+  position: absolute;
+  top: 6.5rem;
 }
 
-.home__title-text-large {
-  font-size: 25px;
+.home__title-number {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  color: $heading-primary-color;
 }
 
 .home__edition {
@@ -115,9 +118,11 @@ a {
 }
 
 .home__circuit-logo {
-  padding: 2rem 0 0 7.7rem;
-  margin: 0;
-  width: 20rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  padding-left: 20%;
+  margin: 0 auto;
+  height: 8rem;
 }
 
 .home__title-circle {
@@ -128,12 +133,15 @@ a {
 }
 
 .home__footer {
-  text-align: center;
-  background: $heading-color;
-  // color: $heading-text-color-light;
+  font-family: "Open Sans", sans-serif;
   color: $heading-text-color-dark;
-  padding: 2em 0;
+  font-size: 1.1rem;
+  font-weight: 300;
+  padding: 1em 0;
+  padding-left: 22%;
+  background-color: $heading-color;
 }
+
 
 .input {
   display: flex;
@@ -160,33 +168,43 @@ a {
 }
 
 .article {
-  width: 100%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   background-color: $heading-text-color-light;
-  // width: 80%;
-  // margin-right: auto;
-  // margin-left: auto;
+  margin: 0 auto;
+  padding: 2rem 0;
 }
 
 .article-container {
   padding-right: 1rem;
   padding-bottom: 1.5rem;
   list-style: none;
-  width: 90%;
+  width: 100%;
   display: inline-flex;
-  flex-direction: column;
+  flex-direction: row;
+  text-decoration: none;
 }
 
-.article__cover-image {
-  width: 80%;
+.articles__cover-image {
+  width: 90%;
+  padding-right: 10%;
 }
 
 .article__title {
   color: $text-color-highlight;
   width: 70%;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
+  font-family: "Josefin Slab", serif;
+  font-weight: 600;
+}
+
+.article__author {
+  width: 70%;
+  margin: 0 auto;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  color: $heading-secondary-color;
 }
 
 .article__blurb {
@@ -195,10 +213,15 @@ a {
 
 .article__content {
   height: 100%;
-  // backgound-color: $heading-text-color-light;
   width: 70%;
   margin-right: auto;
   margin-left: auto;
+}
+
+
+.article__cover-image {
+  width: 70%;
+  margin: 1rem auto;
 }
 
 .articles {
@@ -206,28 +229,32 @@ a {
   flex-direction: column;
   max-height: 200px;
   overflow-y: hidden;
-  // border-top: 2px dashed $border-color;
   & + & {
   border-top: 2px dashed $border-color;
   }
 }
 
 .articles__list {
-  padding-left: 5em;
+  padding-left: 31.5%;
   direction: ltr;
 }
 
 .articles__title {
   color: $text-color-highlight;
+  font-family: "Josefin Slab", serif;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .articles__author {
-
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  color: $heading-secondary-color;
+  text-decoration: none;
 }
 
 .articles__content {
-  // padding: 0;
-  // margin: 0;
+
 }
 
 .articles__edit-button {
@@ -237,4 +264,19 @@ a {
   width: 1rem;
   border: none;
   background: none;
+}
+
+.articles__heading-container {
+  width: 50%;
+}
+
+.article__home-button {
+  font-family: "Josefin Slab", serif;
+  font-weight: 600;
+  color: $heading-primary-color;
+  padding-left: 22%;
+  padding-top: 1rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  line-height: 3.5rem;
 }

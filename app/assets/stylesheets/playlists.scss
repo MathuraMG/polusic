@@ -6,6 +6,10 @@
   width: 100%;
 }
 
+.playlist_container {
+  list-style: none;
+  padding-bottom: 2rem;
+}
 .playlists__edit-button {
   padding: 0;
   margin: 0;
@@ -13,4 +17,16 @@
   width: 1rem;
   border: none;
   background: none;
+}
+
+.playlist__name {
+  font-family: "Josefin Slab", serif;
+  font-weight: 600;
+
+}
+
+.playlist__author {
+  font-family: "Open Sans", sans-serif;
+  color: $heading-secondary-color;
+  font-weight: 300;
 }

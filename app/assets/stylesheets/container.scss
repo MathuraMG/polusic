@@ -3,7 +3,7 @@
   flex-direction: column;
   padding: 0;
   // margin: 0;
-  width: 80%;
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
 }
@@ -15,26 +15,17 @@
   flex-direction: row;
   height:100%;
   .articles-container {
-    // position: fixed;
-    // top: 8rem;
-    // bottom: 5rem;
-    // overflow-y: scroll;
-    padding-bottom: 5rem;
-    width: 65%;
+    padding-top: 2rem;
+    width: 70%;
     left: 3rem;
     background: $heading-text-color-light;
     border-top-right-radius: 7em;
     direction: rtl;
   }
   .playlists-container {
-    // position: fixed;
-    // top: 8rem;
-    // bottom: 5rem;
-    // overflow-y: scroll;
     padding-left: 3rem;
-    padding-bottom: 5rem;
-    width: 25%;
-    // right: 3rem;
+    padding-top: 2rem;
+    width: 20%;
     background: $heading-color;
   }
 }
