@@ -10,6 +10,8 @@
   <%= f.text_area :blurb, :placeholder => "enter blurb", :class => 'input__content' %>
   <%= f.label :content, "Content", :class => 'input__label' %>
   <%= f.text_area :content, :placeholder => "enter article name", required: true, :class => 'input__content' %>
+  <%= f.label :order, "Order", :class => 'input__label' %>
+  <%= f.text_area :order, :placeholder => "enter article order", required: true, :class => 'input__title' %>
     <%= f.submit %>
   <% end %>
   <% if current_user && current_user.is_admin %>

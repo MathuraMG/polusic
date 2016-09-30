@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def index
     @playlists = Playlist.all
-    @articles = Article.all
+    @articles = Article.all.order(order: :asc)
   end
   def present(article)
     if(article && article[/{{(.+)}}/,1])
