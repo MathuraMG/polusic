@@ -134,7 +134,7 @@ a {
 
 .home__footer {
   font-family: "Open Sans", sans-serif;
-  color: $heading-text-color-dark;
+  color: $heading-secondary-color;
   font-size: 1.1rem;
   font-weight: 300;
   padding: 1em 0;
@@ -267,7 +267,11 @@ a {
 }
 
 .articles__heading-container {
-  width: 50%;
+  width: 40%;
+}
+
+.article__cover-image-container {
+  width: 60%;
 }
 
 .article__home-button {
@@ -279,4 +283,19 @@ a {
   font-size: 1.2rem;
   text-decoration: none;
   line-height: 3.5rem;
+}
+
+.container__footer {
+  text-align: center;
+  font-family: "Josefin Slab", serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: $heading-secondary-color;
+}
+
+.container__footer-link {
+  font-family: "Josefin Slab", serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: $heading-primary-color;
 }
