@@ -70,6 +70,6 @@ class PlaylistsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def playlist_params
-      params.require(:playlist).permit(:name, :author, :url)
+      params.require(:playlist).permit(:name, :author, :url, :edition)
     end
 end

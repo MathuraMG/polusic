@@ -12,6 +12,8 @@
   <%= f.text_area :content, :placeholder => "enter article name", required: true, :class => 'input__content' %>
   <%= f.label :order, "Order", :class => 'input__label' %>
   <%= f.text_area :order, :placeholder => "enter article order", required: true, :class => 'input__title' %>
+  <%= f.label :edition, "Edition", :class => 'input__label' %>
+  <%= f.text_area :edition, :placeholder => "enter article edition", required: true, :class => 'input__title' %>
   <%= f.submit %>
 <% end %>
 <%= link_to 'Back', :root %>
